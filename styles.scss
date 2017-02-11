@@ -1,0 +1,89 @@
+  @mixin box-sizing
+  flex: 0 0 auto;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+
+@font-face {
+  font-family: $font_0;
+  font-style: normal;
+  font-weight: 200;
+  src: local('Lato Regular'), local('Lato-Regular'), $url_0 format('woff2');
+  unicode-range: U +0100-024F, U +1E00-1EFF, U +20A0-20AB, U +20AD-20CF, U +2C60-2C7F, U +A720-A7FF;
+}
+@font-face {
+  font-family: $font_0;
+  font-style: normal;
+  font-weight: 200;
+  src: local('Lato Regular'), local('Lato-Regular'), $url_1 format('woff2');
+  unicode-range: U +0000-00FF, U +0131, U +0152-0153, U +02C6, U +02DA, U +02DC, U +2000-206F, U +2074, U +20AC, U +2212, U +2215, U +E0FF, U +EFFD, U +F000;
+}
+@font-face {
+  font-family: $font_0;
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Regular'), local('Lato-Regular'), $url_0 format('woff2');
+  unicode-range: U +0100-024F, U +1E00-1EFF, U +20A0-20AB, U +20AD-20CF, U +2C60-2C7F, U +A720-A7FF;
+}
+@font-face {
+  font-family: $font_0;
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Regular'), local('Lato-Regular'), $url_1 format('woff2');
+  unicode-range: U +0000-00FF, U +0131, U +0152-0153, U +02C6, U +02DA, U +02DC, U +2000-206F, U +2074, U +20AC, U +2212, U +2215, U +E0FF, U +EFFD, U +F000;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+div {
+  margin: 0;
+  padding: 0;
+  &.button-text {
+    font-size: 0.7rem;
+    color: $black_70;
+  }
+  &.explanation-text {
+    font-size: 0.9rem;
+    align-self: center;
+    color: $black_70;
+  }
+  &.button-container {
+    cursor: pointer;
+  }
+}
+.container {
+  border-top: 1px solid $black_12;
+  border-bottom: 1px solid $black_12;
+  width: 100%;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.row {
+  position: relative;
+  padding: 0;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 10px;
+  justify-content: space-between;
+}
+.col-1 {
+  @extend %extend_1;
+  flex-basis: calc(25% - 4px);
+  max-width: calc(25% - 4px);
+}
+.col-3 {
+  @extend %extend_1;
+  flex-basis: calc(75% - 4px);
+  max-width: calc(75% - 4px);
+}
+img.icon {
+  height: 40px;
+}
