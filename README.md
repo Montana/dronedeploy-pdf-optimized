@@ -12,7 +12,7 @@ https://github.com/gliderlabs/herokuish
 
 ## Express.js
 
-For obvious reasons, just proxying requests, via using CORS is not as simple as specifying the appropriate server URL. There are a lot of changes necessary on both the server and client tiers to get it working. It ismuch simpler to proxy your HTTP requests via a server running on your domain, also as usual used JS Promises. Promises will handle any exceptions (both explicit and implicit) in asynchronous code blocks that use then(). I was considering using "bluebird", using ```Promise.promisifyAll```, an example of using bluebird, would be something similar to this, in this type of scenario:
+For obvious reasons, just proxying requests, via using CORS is not as simple as specifying the appropriate server URL. There are a lot of changes necessary on both the server and client tiers to get it working. It is much simpler to proxy your HTTP requests via a server running on your domain, also as usual used JS Promises. Promises will handle any exceptions (both explicit and implicit) in asynchronous code blocks that use then(). I was considering using "bluebird", using ```Promise.promisifyAll```, an example of using bluebird, would be something similar to this, in this type of scenario:
 
 ```javascript
 Promise.promisifyAll(
